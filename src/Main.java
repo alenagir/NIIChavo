@@ -69,12 +69,15 @@ public class Main {
 //        empInfo.print();
 
 
-     Person empl1=new Employee("Ойра-ойра Р.", 1930, "(8183590) 2-81", "наб. бухты Благополучия, 1", Education.HIGH, Position.SENIORSCI, 9, 1.4);
-     Person cust1=new Customer("Вий Х.", 1, null, "Лысая гора", "Испытательный центр");
-     Person people [] = {empl1, cust1};
-     System.out.println(Arrays.toString(people));
-
-
+     Person person1 = new Employee("Name", 1990, "9999","Dnepr",Education.HIGH,Position.SENIORSCI,8,1.0);
+     Person person2 = new Employee("Name", 1990, "9999","Dnepr",Education.HIGH,Position.SENIORSCI,8,1.0);
+     Person person3=new Customer("Питомник Б.", 1923, "(8182) 63-97-18", "г. Архангельск, Троицкий пр-т, д. 52", "газета Правда Севера");
+     Person person4=new Customer("Вий Х.", 0, null, "Лысая гора", "Испытательный центр");
+    Person person5=new Employee("Вий Х.", 0, null, "Лысая гора",Education.NO, Position.RESEARCHASSIST, 8, 1.0);
+     System.out.println(person1.equals(person2));
+     System.out.println(person1.equals(person3));
+     System.out.println(person4.equals(person5));
+     System.out.println(person5.equals(person4));
 
 
     }

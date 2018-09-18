@@ -63,16 +63,16 @@ public class Employee extends Person {
         return position+" "+super.toString() ;
     }
 
-    public boolean equals(Object obj) {     // Overrides equals method if employees have the same parameters
-        if (this == obj) return true;
-        if (obj == null) return false;
-
-        if (!(getClass() == obj.getClass())) return false;
-        else {
-            Employee tmp = (Employee) obj;
-            if (tmp.name == this.name && tmp.birthYear == this.birthYear) return true;
-            else return false;
-        }
-    }
+//    public boolean equals(Object obj) {     // Overrides equals method if employees have the same parameters
+//        if (this == obj) return true;
+//        if (obj == null) return false;
+//
+//        if (!(getClass() == obj.getClass())) return false;
+//        else {
+//            Employee tmp = (Employee) obj;
+//            if (tmp.name == this.name && tmp.birthYear == this.birthYear) return true;
+//            else return false;
+//        }
+//    }
 
 }
