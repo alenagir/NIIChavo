@@ -24,19 +24,7 @@ public abstract class Person {
         return name+": "+address+", "+telNumber;
     }
 
-    public boolean equals(Object obj) {     // Overrides equals method if people have the same parameters
-        if (this == obj) return true;
-        if (obj == null) return false;
-
-        if (!(getClass() == obj.getClass())) return false;
-        else {
-            Person tmp = (Person) obj;
-            if (tmp.name == this.name && tmp.birthYear == this.birthYear) return true;
-            else return false;
-        }
-    }
-
-    public void setName(String name) {
+        public void setName(String name) {
         this.name = name;
     }
 

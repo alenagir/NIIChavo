@@ -15,7 +15,9 @@ public class Researcher extends Employee {
         this.qualification=qualification;
         countResearch++;
     }
-    public String toString() {
-        return super.toString() + " " + qualification;
+
+
+    public String getQualification() {
+        return qualification;
     }
 }
