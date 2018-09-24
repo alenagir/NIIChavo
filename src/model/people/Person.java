@@ -1,5 +1,7 @@
 package model.people;
 
+import java.util.Comparator;
+
 public abstract class Person {
     protected String name;
     protected int birthYear=0;
@@ -19,6 +21,8 @@ public abstract class Person {
     protected abstract void changeTelNumber(String telNum);
 
     protected abstract void changeAddress(String addr);
+
+
 
     public String toString(){
         return name+": "+address+", "+telNumber;

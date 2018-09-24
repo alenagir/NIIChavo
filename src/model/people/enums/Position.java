@@ -1,4 +1,4 @@
-package model.people;
+package model.people.enums;
 
 public enum Position {
         PROGRAMMER {public String toString () {return "Programmer";}},

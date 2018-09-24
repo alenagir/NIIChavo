@@ -1,6 +1,12 @@
 package model.people;
 
-public class Employee extends Person {
+import model.people.enums.Education;
+import model.people.enums.Position;
+import service.PeopleInfo;
+
+import java.util.Collections;
+
+public class Employee extends Person  {
 
     private double rate;
     private int hours;
@@ -78,5 +84,7 @@ public class Employee extends Person {
             else return false;
         }
     }
+
+
 
 }

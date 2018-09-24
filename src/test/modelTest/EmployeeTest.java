@@ -1,8 +1,8 @@
 package test.modelTest;
 
-import model.people.Education;
+import model.people.enums.Education;
 import model.people.Employee;
-import model.people.Position;
+import model.people.enums.Position;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package model.people;
+package model.people.enums;
 
 public enum Education {
     HIGH, TECH, NO

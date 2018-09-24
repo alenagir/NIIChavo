@@ -1,8 +1,8 @@
-package model.people.implEmployee;
+package model.people.inheritEmployee;
 
-import model.people.Education;
+import model.people.enums.Education;
 import model.people.Employee;
-import model.people.Position;
+import model.people.enums.Position;
 
 public class Researcher extends Employee {
 
