@@ -1,4 +1,4 @@
-package model.people;
+package model.people.inheritPerson;
 
 import model.people.Person;
 
@@ -37,7 +37,7 @@ public class Customer extends Person {
     }
 
     public String toString(){
-        return super.toString()+" "+organization;
+        return super.toString()+", "+organization;
     }
 
 

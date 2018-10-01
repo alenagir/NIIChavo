@@ -1,7 +1,7 @@
 package test.modelTest;
 
 import model.people.enums.Education;
-import model.people.Employee;
+import model.people.inheritPerson.Employee;
 import model.people.enums.Position;
 import org.junit.jupiter.api.Test;
 

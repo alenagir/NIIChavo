@@ -1,6 +1,6 @@
 package service;
 
-import model.people.Employee;
+import model.people.inheritPerson.Employee;
 
 public class EmployeeInfo {
     private Employee employee[];

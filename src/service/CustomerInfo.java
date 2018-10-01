@@ -1,6 +1,6 @@
 package service;
 
-import model.people.Customer;
+import model.people.inheritPerson.Customer;
 
 public class CustomerInfo {
     private Customer customer[];

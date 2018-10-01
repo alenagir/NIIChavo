@@ -8,7 +8,6 @@ public abstract class Person {
     protected String telNumber=null;
     protected String address=null;
 
-
     protected Person (){};
 
     protected Person (String name, int birthYear, String telNumber, String address){
@@ -18,17 +17,36 @@ public abstract class Person {
         this.address=address;
     }
 
+    public String toString(){
+        return name+": "+ birthYear+ " year, "+address+", "+telNumber;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (!(getClass() == obj.getClass())) return false;
+        else {
+            Person tmp = (Person) obj;
+            if (tmp.name == this.name && tmp.birthYear == this.birthYear) return true;
+            else return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        final int PRIME = 31;
+        int result = 1;
+        result = PRIME + Integer.parseInt(getName())+getBirthYear();
+        return result;
+    }
+
     protected abstract void changeTelNumber(String telNum);
 
     protected abstract void changeAddress(String addr);
 
 
-
-    public String toString(){
-        return name+": "+address+", "+telNumber;
-    }
-
-        public void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -59,6 +77,8 @@ public abstract class Person {
     public String getAddress() {
         return address;
     }
+
+
 
 
 }

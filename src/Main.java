@@ -1,19 +1,17 @@
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import model.departments.Committee;
-import model.people.Customer;
+import model.people.inheritPerson.Customer;
 import model.people.Person;
 import model.people.enums.Education;
-import model.people.Employee;
 import model.people.enums.Position;
 import model.people.inheritEmployee.Researcher;
 import model.people.inheritEmployee.TechStaff;
 import service.PeopleInfo;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-       int bonus[] = {5,5,5,5,5,5,5}; // the value of bonuses %
-
 
         Researcher researcher1 = new Researcher("Ойра-ойра Р.", 1930, "(8183590) 2-81", "наб. бухты Благополучия, 1",
                 Education.HIGH, Position.SENIORSCI, 9, 1.4, "МГУ");
@@ -46,24 +44,25 @@ public class Main {
         committee.addCommitteeMember(researcher4);
         committee.addCommitteeMember(researcher5);
 
-                      // Prints the Committee members
-
-
-                    //Counts members votes and makes Committee decision
+                        //Counts members votes and makes Committee decision
+        committee.memberVote(3, false);
+        committee.memberVote(4, false);
+        committee.memberVote(6, false);
         committee.memberVote(1, true);
         committee.memberVote(1, false);
         committee.memberVote(2, true);
-        committee.memberVote(3, false);
-        committee.memberVote(4, false);
-        committee.memberVote(5, false);
 
-        System.out.println(committee.idError);
-        System.out.println("Positive votes: "+committee.getCountPositiveVote());
-        System.out.println("Committee decision: "+committee.committeeDecision());
+//        System.out.println(committee.idError);
+//        System.out.println(committee.reVoteError);
+//        System.out.println("Positive votes: "+committee.getCountPositiveVote());
+//        System.out.println("Committee decision: "+committee.committeeDecision());
 
                     // Adds all employees into PeopleInfo list
 
-        PeopleInfo <Employee> peopleInfo =new PeopleInfo <> ();
+        PeopleInfo <Person> peopleInfo =new PeopleInfo <> ();
+        peopleInfo.addPeopleInfo(customer1);
+        peopleInfo.addPeopleInfo(customer2);
+        peopleInfo.addPeopleInfo(customer3);
         peopleInfo.addPeopleInfo(researcher1);
         peopleInfo.addPeopleInfo(researcher2);
         peopleInfo.addPeopleInfo(researcher3);
@@ -72,21 +71,40 @@ public class Main {
         peopleInfo.addPeopleInfo(techStaff1);
         peopleInfo.addPeopleInfo(techStaff2);
 
-        peopleInfo.print();
+       // peopleInfo.print();
 
        // Gets full information about the person  by person's name
-    System.out.println("PersonalInfo " +  peopleInfo.getFullPersonInfo("Привалов А."));
+      // System.out.println("PersonalInfo " +  peopleInfo.getFullPersonInfo("Привалов А."));
      // Gets telephone number by person's name
-     System.out.println("Personal telephone " +  peopleInfo.getPersonalTelNumber("Привалов А."));
+     // System.out.println("Personal telephone 1 " +  peopleInfo.getPersonTelNumber("  Привалов А."));
+      // System.out.println("Personal telephone 2 " +  peopleInfo.getPersonTelNumber("  Привалов"));
 
      // Gets person's name by  telephone number
-     peopleInfo.getPersonNameByPhone("2-81");
-     peopleInfo.getPersonNameByPhone("(8183590) 2-81");
-     // Prints the results of the getPersonName method
-     peopleInfo.printNameByPhone();
+//     System.out.println("1)Name of the telephone owner " + peopleInfo.getPersonNameByPhone("2-81"));
+//     System.out.println("2)Name of the telephone owner " + peopleInfo.getPersonNameByPhone("281"));
+//     System.out.println("3)Name of the telephone owner " + peopleInfo.getPersonNameByPhone("(8183590) 2-81"));
 
 
-     //no instance(s) of type variable(s) T exist so that PeopleInfo<Employee> conforms to List<T>
-     // Collections.sort(peopleInfo, PeopleInfo.COMPARE_BY_NAME );
+      //Finds the oldest employee
+//        System.out.println("The oldest Employee is: ");
+//        System.out.println(peopleInfo.getOldestEmployee());
+
+     //Sorts by Name
+//        System.out.println("Sorted by name:");
+//        peopleInfo.sortByName();
+//        peopleInfo.print();
+//
+
+     //Sorts by Age
+//     peopleInfo.sortByAge();
+//     peopleInfo.print();
+//     System.out.println();
+
+     //Finding the customer who works in the definite organization
+
+   System.out.println(peopleInfo.getCustomerByOrganiz("газета Правда Севера"));
+
+
+
     }
 }
